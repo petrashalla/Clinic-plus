@@ -1,0 +1,115 @@
+.services {
+    margin-bottom: 80px;
+
+    &__title {
+        margin-bottom: 29px;
+    }
+
+    &__cards {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 32px 29px;
+    }
+}
+
+.card {
+    border-radius: 14px;
+    padding: 24px;
+    height: 375px;
+    background: #f6fdf6;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    &__title {
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 140%;
+        margin-bottom: 10px;
+    }
+
+    &__subtitle {
+        line-height: 160%;
+        text-align: left;
+        margin-bottom: 8px;
+    }
+
+    &__item {
+        line-height: 160%;
+        text-align: left;
+        margin-bottom: 8px;
+
+        &::before{
+            content: "";
+            display: inline-block;
+            width: 9px;
+            height: 8px;
+            background-color: var(--main-green);
+            border-radius: 50%;
+            vertical-align: middle;
+            margin-right: 8px;
+        }
+    }
+
+    &__more {
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 150%;
+        color: #4ec259;
+        text-align: left;
+
+        &::after{
+            content: url("./../../img/card-arrow.svg");
+            display: inline-block;
+            margin-left: 8px;
+        }
+
+        &::before{
+            content: "";
+            display: block;
+            width: 100%;
+            height: 1px;
+            background-color: var(--main-green);
+            margin-bottom: 15px;
+        }
+    }
+}
+
+
+@media (max-width: 900px) {
+    .services {
+        margin-bottom: 48px;
+    
+        &__cards {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 32px 29px;
+        }
+    }
+}
+
+@media (max-width: 630px) {
+    .services {
+        margin-bottom: 48px;
+    
+        &__title {
+            margin-bottom: 24px;
+            font-size: 28px;
+        }
+    
+        &__cards {
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+            gap: 20px;
+        }
+    }
+
+    .card {
+        padding: 16px;
+    
+        &__title {
+            font-size: 20px;
+            margin-bottom: 8px;
+        }
+    }
+}
